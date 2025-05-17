@@ -9,12 +9,4 @@ resources:
   - service.yaml
   - ingress.yaml
 
-secretGenerator:
-  - name: napi-secrets
-    literals:
-      - MONGODB_URI=REPLACE_ME
-      - NEWSKY_API_KEY=REPLACE_ME
-    type: Opaque
 
-generatorOptions:
-  disableNameSuffixHash: true
