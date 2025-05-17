@@ -2,8 +2,3 @@ apiVersion: v1
 kind: Namespace
 metadata:
   name: napi
-resources:
-  - namespace.yaml
-  - deployment.yaml
-  - service.yaml
-  - ingress.yaml
