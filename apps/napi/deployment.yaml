@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: napi
+  labels:
+    app: napi
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: napi
+  template:
+    metadata:
+      labels:
+        app: napi
+    spec:
+      containers:
+        - name: napi
+          image: harbor.zatto-lab.cloud/napi/napi:latest
+          ports:
+            - containerPort: 3000
+          env:
+            - name: MONGODB_URI
+              valueFrom:
+                secretKeyRef:
+                  name: napi-secrets
+                  key: MONGODB_URI
+            - name: NEWSKY_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: napi-secrets
+                  key: NEWSKY_API_KEY
