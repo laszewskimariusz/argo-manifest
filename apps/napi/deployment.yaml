@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: napi
-          image: harbor.zatto-lab.cloud/napi/napi:0.1.5.14
+          image: harbor.zatto-lab.cloud/napi/napi:0.1.5.15
           ports:
             - containerPort: 3000
           env:
