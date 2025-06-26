@@ -21,4 +21,4 @@ spec:
               service:
                 name: dtopsky
                 port:
-                  number: 80 
+                  number: 8000 
