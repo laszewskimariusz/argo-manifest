@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: dtopsky
-          image: harbor.zatto-lab.cloud/d-topsky/d-topsky:.*
+          image: harbor.zatto-lab.cloud/d-topsky/d-topsky:0.0.5
           ports:
             - containerPort: 8000
           env:
