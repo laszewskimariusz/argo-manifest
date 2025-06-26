@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dtopsky
+  labels:
+    app: dtopsky
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dtopsky
+  template:
+    metadata:
+      labels:
+        app: dtopsky
+    spec:
+      containers:
+        - name: dtopsky
+          image: harbor.zatto-lab.cloud/dtopsky/dtopsky:latest
+          ports:
+            - containerPort: 8000
+          env:
+            - name: DEBUG
+              value: "False"
+            - name: ALLOWED_HOSTS
+              value: "dtopsky.topsky.app" 

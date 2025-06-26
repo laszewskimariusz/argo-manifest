@@ -1,0 +1,29 @@
+# Kubernetes secrets (should not be committed)
+secret.yaml
+
+# Temporary files
+*.tmp
+*.log
+
+# IDE files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+ENV/
+
+# Django
+*.sqlite3
+media/
+staticfiles/ 
