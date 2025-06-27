@@ -15,6 +15,9 @@ spec:
         app: dtopsky
     spec:
       containers:
+        envFrom:
+        - secretRef:
+            name: dtopsky-secrets
         - name: dtopsky
           image: harbor.zatto-lab.cloud/d-topsky/d-topsky:0.0.34
           ports:
@@ -35,3 +38,5 @@ spec:
                   key: ALLOWED_HOSTS
             - name: DEBUG
               value: "False"
+            - name: ALLOWED_HOSTS
+              value: "dtopsky.topsky.app" 
