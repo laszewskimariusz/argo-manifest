@@ -15,8 +15,11 @@ spec:
         app: dtopsky
     spec:
       containers:
+        envFrom:
+        - secretRef:
+            name: dtopsky-secrets
         - name: dtopsky
-          image: harbor.zatto-lab.cloud/d-topsky/d-topsky:0.0.19
+          image: harbor.zatto-lab.cloud/d-topsky/d-topsky:0.0.20
           ports:
             - containerPort: 8000
           env:
