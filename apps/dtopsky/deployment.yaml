@@ -19,7 +19,7 @@ spec:
         - secretRef:
             name: dtopsky-secrets
         - name: dtopsky
-          image: harbor.zatto-lab.cloud/d-topsky/d-topsky:0.0.20
+          image: harbor.zatto-lab.cloud/d-topsky/d-topsky:0.0.21
           ports:
             - containerPort: 8000
           env:
